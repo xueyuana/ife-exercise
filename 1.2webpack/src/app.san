@@ -1,0 +1,17 @@
+<template>
+  <div class="hello">hello{{msg}}</div>
+</template>
+<script>
+ export default {
+   initData () {
+     return {
+       msg: 'word'
+     }
+   }
+ }
+</script>
+<style>
+.hello {
+  color: blue
+}
+</style>
