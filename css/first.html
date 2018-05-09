@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .box {
+    width: 120px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .border {
+    width: 60px;
+    height: 3px;
+    background-color: aquamarine;
+    transition: all 1s ease-in-out;
+    transform: scaleX(0);
+    margin: 0 auto;
+  }
+  .text {
+    transition: all 1s ease-in-out;
+  }
+  .change {
+    transform: scaleX(2)
+  }
+  .color {
+    color: aquamarine;
+  }
+
+</style>
+<body>
+<div class="box">
+  <span class="text">切换样式</span>
+  <div class="border"></div>
+  <button id="btn">切换</button>
+</div>
+
+</body>
+<script>
+  const btn = document.getElementById('btn')
+  const border = document.querySelector('.border')
+  const span = document.querySelector('span')
+  btn.onclick = () => {
+    border.classList.toggle('change')
+    span.classList.toggle('color')
+  }
+</script>
+</html>
