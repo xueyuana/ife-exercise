@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  #container {
+    width: 500px;
+    height: 500px;
+  }
+</style>
+<script src="../lottie-web-master/build/player/lottie.js"></script>
+
+<body>
+<div id="container">
+</div>
+</body>
+<script>
+  const container = document.querySelector('#container')
+  lottie.loadAnimation({
+    container: container,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'data.json'
+  })
+</script>
+</html>
