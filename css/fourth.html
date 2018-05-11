@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>绕中心旋转立方体</title>
+</head>
+<style>
+  body {
+    perspective: 600px;
+  }
+  .card-wrap {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 2s;
+  }
+  .card {
+    width: 80px;
+    height:80px;
+    border: 1px solid skyblue;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    position: absolute;
+  }
+  .card:nth-child(1) {
+    transform: translateZ(40px);
+  }
+  .card:nth-child(2) {
+    transform: rotateY(90deg) translateZ(40px);
+  }
+  .card:nth-child(3) {
+    transform: rotateY(-90deg) translateZ(40px);
+  }
+  .card:nth-child(4) {
+    transform: rotateY(180deg) translateZ(40px);
+  }
+  .card:nth-child(5) {
+    transform: rotateX(90deg) translateZ(40px);
+  }
+  .card:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(40px);
+  }
+  @keyframes xuanzhuan {
+    from {
+      transform: rotateY(0deg);
+
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  .wrap:hover .card-wrap {
+    animation: xuanzhuan 2s linear infinite;
+  }
+</style>
+<body>
+<div class="wrap">
+  <div class="card-wrap">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+  </div>
+</div>
+
+</body>
+</html>
